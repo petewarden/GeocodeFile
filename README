@@ -1,0 +1,41 @@
+geocodefile
+~~~~~~~~~~~
+
+This script lets you run a file full of addresses or other location strings through Yahoo's Geoplanet geocoding API. The input format is simply a text file made up of a series of lines, each of which is treated as a location string and fed through the API. The latitude and longitude are printed for each location, optionally prefixed by the original location string followed by a tab.
+
+To test it, run it like this:
+
+./geocodefile.php -i testdata.txt -o output.txt -s
+
+After a few seconds it should complete, and the output should contain estimated latitude,longitude coordinates for each location.
+
+You will need to obtain your own Yahoo App ID from  http://developer.yahoo.com/geo/ and insert it into the script before you can run it.
+
+The included GeoPlanet PHP class is by Tyler Hall and licensed under the MIT license
+
+****************************
+ Licensed under the 2-clause (ie no advertising requirement) BSD license,
+ making it easy to reuse for commercial or GPL projects:
+ 
+ (c) Pete Warden <pete@petewarden.com> http://petewarden.typepad.com/ Jan 8th 2010
+ 
+ Redistribution and use in source and binary forms, with or without modification, are
+ permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice, this 
+      list of conditions and the following disclaimer.
+   2. Redistributions in binary form must reproduce the above copyright notice, this 
+      list of conditions and the following disclaimer in the documentation and/or 
+      other materials provided with the distribution.
+   3. The name of the author may not be used to endorse or promote products derived 
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
